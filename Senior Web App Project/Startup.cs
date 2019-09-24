@@ -39,6 +39,7 @@ namespace Senior_Web_App_Project
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDefaultIdentity<IdentityUser>()
+                .AddRoles<IdentityRole>()
                 .AddDefaultUI(UIFramework.Bootstrap4)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
@@ -75,3 +76,5 @@ namespace Senior_Web_App_Project
         }
     }
 }
+
+
